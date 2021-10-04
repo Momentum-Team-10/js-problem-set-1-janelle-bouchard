@@ -8,7 +8,7 @@ let leftover = 20 % 6;
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
 function greeting (name) {
-    return 'Hello' + name
+    return 'Hello, ' + name +'!'
 }
 // const greeting = (name2) => {
 //     return 'Hello' + name2
@@ -17,9 +17,10 @@ function greeting (name) {
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 function isOdd (number) {
-    if (number % 2 !== 0) {    
+    if (number % 2 === 1 || number % 2 === -1) {    
     return true
-    } else {
+    } 
+    else {
     return false
     }}
 // 5. Create a function called isEven that, given a number, will
@@ -40,18 +41,27 @@ function fahrenheitToCelsius (tempF) {
 // 7. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
-
+function celsiusToFahrenheit (tempC) {
+    return ((tempC * 1.8) + 32)
+}
 // 8. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Kelvin. This function must use your previous
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
-
+function fahrenheitToKelvin (tempF) {
+    return (fahrenheitToCelsius(tempF))+273.15
+}
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
-
+function lesser (number1, number2) {
+    if (number1 > number2){
+    return number2 }
+   else if (number1 < number2) {
+    return number1
+}}
 // 10. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
 // in the specified language. The supported languages and their
@@ -63,7 +73,9 @@ function fahrenheitToCelsius (tempF) {
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-
+function multigreeting (name) {
+    if 
+}
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
 // example, the greatest common divisor of 24 and 81 is 3. The greatest common divisor of
