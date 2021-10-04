@@ -58,9 +58,9 @@ function fahrenheitToKelvin (tempF) {
 // use an if/else statement.
 function lesser (number1, number2) {
     if (number1 > number2){
-    return number2 }
-   else if (number1 < number2) {
-    return number1
+        return number2 }
+    else if (number1 < number2) {
+        return number1
 }}
 // 10. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -73,8 +73,15 @@ function lesser (number1, number2) {
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
-function multigreeting (name) {
-    if 
+function multigreeting (name, lang) {
+    if (lang === "en") {
+        return "Hello, " + (name) + "!"}
+    else if (lang === "es") {
+        return "¡Hola, " + (name) + "!"}
+    else if (lang === "fr") {
+        return "Bonjour, " + (name) + "!"}
+    else if (lang === "eo") {
+        return "Saluton, " + (name) + "!"}
 }
 // 11. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
@@ -103,4 +110,27 @@ function multigreeting (name) {
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
 
-// const gcd = 
+function gcd(a, b) {
+    let d = 0;
+
+    while (a % 2 === 0 && b % 2 === 0) {
+        a /= 2;
+        b /= 2;
+        d++; 
+    }
+
+    while (a !== b) {
+        if (a % 2 === 0) {
+            a /= 2;
+        } else if (b % 2 === 0) {
+            b /= 2;
+        } else if (a > b) {
+            a = (a – b) / 2; 
+        } else {
+            b = (b – a) / 2;
+        }
+    }
+
+    let g = a;
+    return g * 2 ** d;
+}
