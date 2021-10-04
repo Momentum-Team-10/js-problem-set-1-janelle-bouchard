@@ -21,7 +21,7 @@ function isOdd (number) {
     return true
     } else {
     return false
-    }
+    }}
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
@@ -30,15 +30,13 @@ function isEven (number) {
     return true
     } else {
     return false
-    }
+    }}
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
-// function fahrenheitToCelsius (fahrenheit)
-//     const celsius = (fahrenheit - 32) / 1.8
-//     return celsius
-// function fahrenheitToCelsius (fahrenheit)
-//     return (fahrenheit - 32) / 1.8
+function fahrenheitToCelsius (tempF) {
+    return ((tempF - 32) / 1.8)
+}
 // 7. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
